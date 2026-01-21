@@ -16,3 +16,13 @@ extern "C" void launch_vector_add(const float* a, const float* b, float* c, int 
   vector_add<<<blocks, threads>>>(a,b,c,n);
   cudaDeviceSynchronize();
 }
+
+extern "C" int cuda_alloc(void** ptr, size_t size)
+{
+  return cudaMalloc(ptr, size);
+}
+
+extern "C" int cuda_free(void* ptr)
+{
+  return cudaFree(ptr);
+}
