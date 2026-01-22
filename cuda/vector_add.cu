@@ -26,3 +26,8 @@ extern "C" int cuda_free(void* ptr)
 {
   return cudaFree(ptr);
 }
+
+extern "C" int cuda_memcpy(void* dst, const void* src, size_t size, int kind)
+{
+  return cudaMemcpy(dst, src, size, static_cast<cudaMemcpyKind>(kind));
+}
