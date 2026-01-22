@@ -34,6 +34,7 @@ This project combines **Rust for safety and orchestration** with **CUDA/C++ for 
 
 ## 🏗️ Architecture Overview
 
+``` text
 Rust (host, safe API)
 ├── DeviceBuffer<T> // owns GPU memory
 ├── Host ↔ Device copies
@@ -49,7 +50,11 @@ C++ / CUDA
 ↓
 NVIDIA GPU
 
+```
+
 ## 📂 Project Structure
+
+``` text
 
 rust_cuda_runtime/
 ├── src/
@@ -63,6 +68,7 @@ rust_cuda_runtime/
 ├── build.rs # Cargo build script (linking)
 └── Cargo.toml
 
+```
 
 ## 🔑 Core Components
 
